@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=.5" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<title></title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+<link rel="stylesheet" href="./css/tc.css" />
+	<link rel="stylesheet" href="./css/grid-listview.css">
+<script src="http://code.jquery.com/jquery-1.7.2.min.js">
+        </script>
+<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js">
+        </script>
+<script src="./js/tc.js">
+        </script>
+<!-- User-generated css -->
+<style>
+.ui-icon-cruise {
+	background-image: url("./img/icon_cruise.png");
+}
+.offer_logo {
+	position:relative;
+	float:left;
+	margin-right:10px;
+	width:120px;
+}
+.offer_content {
+	position:absolute;
+	white-space:normal
+}
+.dvtitle {
+	font-size: 1em;
+	white-space:normal;
+}
+.dvsummary {
+	font-size: 14px;
+	white-space:normal;
+	font-weight:normal;
+	line-height:16px
+}
+.dvdate {
+	font-size: 14px;
+}
+br {
+	line-height:2px
+}
+.imgpreview {
+	float: left;
+	padding-top: 0.7em;
+	padding-right:20px
+}
+.logo img {
+	max-width : 30%;
+	height : auto;
+}
+.logo {
+	background-color:#00FF00;
+}
+.li-has-arrow {
+	padding-right: 0;
+!important
+}
+body {
+	margin-top: 0px;
+}
+
+.my-page .ui-header {
+    color: #FFFFFF;
+
+}
+
+ 
+.my-page .ui-body-a {background-image:url(./img/b4.jpg);background-repeat:repeat-x;
+background-attachment:fixed; background-position:center top; background-color:#1d3655}
+.altback .ui-body-a {background-image:url(./img/b4.jpg);background-repeat:repeat-x;
+background-attachment:fixed; background-position:center top; background-color:#1d3655}
+</style>
+<!-- User-generated js -->
+<script>
+            try {
+
+    $(function() {
+
+    });
+
+  } catch (error) {
+    console.error("Your javascript has an error: " + error);
+  }
+        </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+<!--*******************Home Page****************Select Which Section******************------------------->
+<div data-role="page" id="selectsection" data-theme="a" style="background-image:url(img/b4.jpg); padding-top:0px" class="my-page" >
+<!-- Home -->
+
+<!--Panel Menu on Home Page-->
+<div data-role="panel" id="menua" data-position="left"  data-theme="b"  data-dismissible="true" data-display="overlay" data-inset="false" style="background-image:url(img/menub.png)">
+
+        <a data-role="button" data-theme="a"  data-transition="slide"   href="#lifestyle" data-icon="star" data-iconpos="left">
+           Exclusive Offers
+        </a>
+        <a data-role="button" data-theme="a"  data-transition="slide" href="#articles"  data-icon="grid" data-iconpos="left">
+            Travel Club Articles
+        </a>
+                <a data-role="button" data-theme="a"  data-transition="slide" href="#about"  data-icon="info" data-iconpos="left">
+           About Travel Club
+        </a>
+        <a data-role="button" data-theme="a" data-rel="close" href="#page1" data-icon="info" data-iconpos="left">
+           Agency Info
+        </a>
+        <a data-role="button" data-theme="a"  data-rel="close" href="#page1" data-icon="gear" data-iconpos="left">
+            Settings
+        </a>
+                <a data-role="button"  data-rel="close" data-theme="a" href="#menu1" data-icon="back" data-iconpos="left">
+            Close
+        </a>
+
+</div>
+<!--End Panel Menu on Home Page-->    
+    
+<!-- Home Page Header-->
+<div data-theme="a" data-role="header" data-position="fixed" style="height:45px" >
+     <h2 style="font-weight:bold">Travel Club</h2>
+        <a data-role="button" href="#menua" data-icon="grid" data-iconpos="left"
+        class="ui-btn-left" data-rel="open" data-transition="slide"> Menu</a>
+    </div>
+
+<!-- Home Page Responsive Content-->
+<div data-role="content" >
+    <div style="width: 474px; height: 110px; position: relative;margin-left:auto;margin-right:auto"><img src="./img/tc_logo.png" alt="image" width="184" height="109" style="position: absolute; top: 0px; left: 0px; margin-left: 0px; margin-top: 0px"><img src="./img/agency_logo.png" alt="image" style="position: absolute; top: 0px; left: 200px; margin-left: 0px; margin-top: 0px"></div>
+<ul data-role="listview" data-inset="true">
+        	<li><a href="#lifestyle" data-transition="slide" >
+            	<img src="./img/offers.jpg">
+            	<h2>Exclusive Offers</h2>
+                <p>Travel Club Exclusive Offers</p>
+                 <!-- <p class="ui-li-aside">Offers</p>-->
+            </a></li>
+        	<li><a href="#articles" data-transition="slide" >
+            	<img src="./img/articles.JPG">
+            	<h2>TravelClub Articles</h2>
+                <p>Travel Club Articles</p>
+               <!-- <p class="ui-li-aside">EXCLUSIVE</p>-->
+            </a></li>
+                	<li><a href="#about">
+             	<img src="./img/about.jpg">
+            	<h2>About the Travel Club</h2>
+                <p>All about the Travel Club</p>
+ 
+            </a></li> 
+                   	<li><a href="#">
+            	 	<img src="./img/settings.jpg">
+            	<h2>Settings</h2>
+                <p>Travel Club Settings</p>
+                 <!--  <p class="ui-li-aside">SPECIAL OFFERS</p>-->
+            </a></li>
+    
+            
+<li><a href="#" >
+             	<img src="./img/agency.jpg">
+            	<h2>Agency Information</h2>
+                <p>Update Agency Profile </p>
+                 <!--  <p class="ui-li-aside">LIMITED TIME</p>-->
+            </a></li>
+
+        <!--	<li><a href="#">
+        	  <img src="./img/romance.jpg">
+        	  <h2>Romantic Offers</h2>
+                <p>Travel Club Romantic Offers</p>
+            </a></li>-->
+    </ul>
+          
+ </div>
+<!-- End Home Page Responsive Content-->
+ </div>
+
+
+
+<!--**********Select Lifestyle: Offers Page************************-->
+<div data-role="page" id="lifestyle" data-theme="a" style="background-image:url(img/b4.jpg); padding-top:0px" class="my-page altback" >
+
+<!-- Menu for Select Lifestyle page--> 
+<div data-role="panel" id="menua" data-position="left"  data-theme="b"  data-dismissible="true" data-display="overlay" data-inset="false" style="background-image:url(img/menub.png)">
+        <a data-role="button" data-theme="a" data-transition="slide" data-direction="reverse" href="#selectsection" data-icon="home" data-iconpos="left">
+           Home
+        </a>
+        <a data-role="button" data-theme="a"  data-rel="close" href="#lifestyle" data-icon="star" data-iconpos="left">
+           Exclusive Offers
+        </a>
+        <a data-role="button" data-theme="a"  data-transition="slide" href="#articles" data-icon="grid" data-iconpos="left">
+            Travel Club Articles
+        </a>
+                        <a data-role="button" data-theme="a"  data-transition="slide" href="#about"  data-icon="info" data-iconpos="left">
+           About Travel Club
+        </a>
+        <a data-role="button" data-theme="a" data-rel="close" href="#page1" data-icon="info" data-iconpos="left">
+           Agency Info
+        </a>
+        <a data-role="button" data-theme="a"  data-rel="close" href="#page1" data-icon="gear" data-iconpos="left">
+            Settings
+        </a>
+                <a data-role="button"  data-rel="close" data-theme="a" href="#menu1" data-icon="back" data-iconpos="left">
+            Close
+        </a>
+</div>
+    
+    
+<!-- Header for Select Lifestyle page-->    
+<div data-theme="a" data-role="header" data-position="fixed" style="height:45px" >
+     <h2 style="font-weight:bold">Travel Club Exclusive Offers</h2>
+ <a data-role="button" href="#menua" data-icon="grid" data-iconpos="left"
+        class="ui-btn-left" data-rel="open" data-transition="slide">Menu</a>
+    </div>
+
+
+<!-- Responsive Content for Select Lifestyle page-->   
+<div data-role="content" >
+<div style="width: 474px; height: 110px; position: relative;margin-left:auto;margin-right:auto;display:none"><img src="./img/tc_logo.png" alt="image" width="184" height="109" style="position: absolute; top: 0px; left: 0px; margin-left: 0px; margin-top: 0px"><img src="./img/agency_logo.png" alt="image" style="position: absolute; top: 0px; left: 200px; margin-left: 0px; margin-top: 0px"></div>
+ <ul data-role="listview" data-inset="true">
+        	<li><a href="#featured" data-transition="slide" >
+            	<img src="./img/featured.jpg">
+            	<h2>Featured Offers</h2>
+                <p>Travel Club Featured Offers</p>
+                 <!-- <p class="ui-li-aside">Offers</p>-->
+            </a></li>
+        	<li><a href="#featured" data-transition="slide" >
+            	<img src="./img/FAMILY.JPG">
+            	<h2>Family Offers</h2>
+                <p>Travel Club Family Offers</p>
+               <!-- <p class="ui-li-aside">EXCLUSIVE</p>-->
+            </a></li>
+        	<li><a href="#" >
+             	<img src="./img/luxury.jpg">
+            	<h2>Luxury Offers</h2>
+                <p>Travel Club Luxury Offers</p>
+                 <!--  <p class="ui-li-aside">LIMITED TIME</p>-->
+            </a></li>
+        	<li><a href="#">
+            	 	<img src="./img/cultural.jpg">
+            	<h2>Cultural Offers</h2>
+                <p>Travel Club Cultural Offers</p>
+                 <!--  <p class="ui-li-aside">SPECIAL OFFERS</p>-->
+            </a></li>
+        	<li><a href="#">
+             	<img src="./img/cul.jpg">
+            	<h2>Culinary Offers</h2>
+                <p>Travel Club Culinary Offers</p>
+ 
+            </a></li>
+        	<li><a href="#">
+        	  <img src="./img/romance.jpg">
+        	  <h2>Romantic Offers</h2>
+                <p>Travel Club Romantic Offers</p>
+            </a></li>
+    </ul>
+          
+ </div><!-- /content -->
+</div><!-- /page -->
+
+
+<!--**********Featured Offers Page************************  -->
+<!-- Featured Page -->
+<div data-role="page" id="featured">
+
+<!----Menu for Featured offers Page--->
+<div data-role="panel" id="menua" data-position="left"  data-theme="b"  data-dismissible="true" data-display="overlay" data-inset="false" style="background-image:url(img/menub.png)">
+        <a data-role="button" data-theme="a" data-transition="slide" data-direction="reverse" href="#selectsection" data-icon="home" data-iconpos="left">
+           Home
+        </a>
+        <a data-role="button" data-theme="a"  data-rel="close" href="#lifestyle" data-icon="star" data-iconpos="left">
+           Exclusive Offers
+        </a>
+        <a data-role="button" data-theme="a"  data-transition="slide" href="#articles" data-icon="grid" data-iconpos="left">
+            Travel Club Articles
+        </a>
+                        <a data-role="button" data-theme="a"  data-transition="slide" href="#about"  data-icon="info" data-iconpos="left">
+           About Travel Club
+        </a>
+        <a data-role="button" data-theme="a" data-rel="close" href="#page1" data-icon="info" data-iconpos="left">
+           Agency Info
+        </a>
+        <a data-role="button" data-theme="a"  data-rel="close" href="#page1" data-icon="gear" data-iconpos="left">
+            Settings
+        </a>
+                <a data-role="button"  data-rel="close" data-theme="a" href="#menu1" data-icon="back" data-iconpos="left">
+            Close
+        </a>
+
+</div>
+
+ <!----Filter APnel for Featured Offers Page--->
+  <div data-role="panel" id="pan_set" data-position="right"  data-theme="a"  data-dismissible="true" data-display="overlay">
+    <div data-role="content">
+        <div id="checkboxes1" data-role="fieldcontain" >
+            <fieldset data-role="controlgroup" data-type="vertical" data-mini="false">
+              
+
+                </br>
+                <input id="checkbox1" name="Cruise" type="checkbox" >
+                <label for="checkbox1">
+                    Cruise
+                </label>
+                <input id="checkbox2" name="Ground" type="checkbox">
+                <label for="checkbox2">
+                    Ground
+                </label>
+                <input id="checkbox3" name="Air" type="checkbox" >
+                <label for="checkbox3">
+                    Air
+                </label>
+                <input id="checkbox4" name="Tours" type="checkbox" >
+                <label for="checkbox4">
+                    Tours
+                </label>
+                <input id="checkbox5" name="Other" type="checkbox">
+                <label for="checkbox5">
+                    Other
+                </label>
+            </fieldset>
+              <a class="ui-btn ui-shadow ui-btn-corner-all ui-btn-inline ui-btn-icon-left ui-btn-up-a" data-inline="true" data-icon="delete" data-theme="b" data-role="button" data-rel="close" href="#pan-set" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span">
+<span class="ui-btn-inner">
+<span class="ui-btn-text">Close</span>
+<span class="ui-icon ui-icon-delete ui-icon-shadow"> </span>
+</span>
+</a>
+        </div>
+    </div>
+
+  </div>
+  <!----END Filter PANEL--->
+
+<!----Header for Featured offers Page--->
+  <div data-theme="a" data-role="header">
+    <h3> Featured Offers </h3>
+        <a href="#pan_set" data-rel="open" data-transition="fade" data-theme="" data-icon="gear" class="ui-btn-right" data-iconpos="left"> Filter </a>
+        
+        <a href="#menua" data-rel="open" data-transition="fade" data-theme="" data-icon="grid" class="ui-btn-left" data-iconpos="left">  Menu</a>
+  </div>
+  
+  
+<!----Content for Featured offers Page--->  
+      <div data-role="content">
+  <ul data-role="listview" data-inset="false">
+    <li><a href="#offer" data-transition="pop" >
+      <img src="./img/hal1.jpg">
+      <h2>Receive a $75 Shipboard Credit per stateroom</h2>
+      <p>Volendam – 14-Day Asia Passage – April 1, 2013. 
+        Westerdam – 35-Day Hawaii, Tahiti & Marquesas</p>
+      </a> </li>
+    <li><a href="#offer" data-transition="pop" ><img src="./img/oceania.jpg">
+      <h2>Free Pre-Paid Gratuities </h2>
+      <p>Applicable Sailings:
+        May 25, 2013 – Riviera – Treasures & </p>
+      </a> </li>
+    <li><a href="#offer" data-transition="pop" ><img src="./img/dollar.jpg">
+      <h2>FREE One Car Class Upgrade </h2>
+      <p>Book a Compact or Mid-size vehicle and receive a free upgrade to next higher car class up to a </p>
+      </a> </li>
+    <li><a href="#offer" data-transition="pop" ><img src="./img/globus.jpg">
+      <h2>Receive a $400 per couple air credit</h2>
+      <p>Up to $400 Air Credit per couple on 2013 Globus South America Tours on LAN and TAM Airlines*</p>
+      </a> </li>
+      
+          <li><a href="#offer"><img src="./img/avanti.jpg">
+      <h2>$50 off per person</h2>
+      <p>Save big with Avanti Destinations when you create a personalized vacation to Europe or Latin Americain now through March 31, 2013.</p>
+      </a> </li>
+      
+          <li><a href="#offer" data-transition="pop" ><img src="./img/avis.jpg">
+      <h2>Single upgrade </h2>
+      <p>Coupon valid for a one time, one car group upgrade on an intermediate (group C) through a </p>
+      </a> </li>
+      
+          <li><a href="#offer" data-transition="pop" ><img src="./img/ROCKY.jpg">
+      <h2>$50 onboard souvenir certificate </h2>
+      <p>Journey into the heart of the Canadian Rockies on the award-winning Rocky Mountaineer train. A</p>
+      </a> </li>
+      
+                <li><a href="#offer" data-transition="pop" ><img src="./img/rci.jpg">
+      <h2>Complimentary Spa Treatment! </h2>
+      <p>Offer valid on any 7-Night or longer Caribbean or Europe sailing departing March 1, 2013 – August 31, 2013, balcony stateroom or above.</p>
+      </a> </li>
+          <li><a href="#offer" data-transition="pop" ><img src="./img/dollar.jpg">
+      <h2>FREE One Car Class Upgrade </h2>
+      <p>Book a Compact or Mid-size vehicle and receive a free upgrade to next higher car class up to a </p>
+      </a> </li>
+    <li><a href="#offer" data-transition="pop" ><img src="./img/globus.jpg">
+      <h2>Receive a $400 per couple air credit</h2>
+      <p>Up to $400 Air Credit per couple on 2013 Globus South America Tours on LAN and TAM Airlines*</p>
+      </a> </li>
+      
+          <li><a href="#offer"><img src="./img/avanti.jpg">
+      <h2>$50 off per person</h2>
+      <p>Save big with Avanti Destinations when you create a personalized vacation to Europe or Latin Americain now through March 31, 2013.</p>
+      </a> </li>
+                <li><a href="#offer" data-transition="pop" ><img src="./img/avis.jpg">
+      <h2>Single upgrade </h2>
+      <p>Coupon valid for a one time, one car group upgrade on an intermediate (group C) through a </p>
+      </a> </li>
+      
+          <li><a href="#offer" data-transition="pop" ><img src="./img/ROCKY.jpg">
+      <h2>$50 onboard souvenir certificate </h2>
+      <p>Journey into the heart of the Canadian Rockies on the award-winning Rocky Mountaineer train. A</p>
+      </a> </li>
+      
+                <li><a href="#offer" data-transition="pop" ><img src="./img/rci.jpg">
+      <h2>Complimentary Spa Treatment! </h2>
+      <p>Offer valid on any 7-Night or longer Caribbean or Europe sailing departing March 1, 2013 – August 31, 2013, balcony stateroom or above.</p>
+      </a> </li>
+  </ul>
+  </div>
+</div>
+<!--End featured Page-->
+
+
+
+
+<!--Sample Articles Page--->
+<div data-role="page" id="articles">
+
+<!--Sample Articles Page: Menu--->
+<div data-role="panel" id="menua" data-position="left"  data-theme="b"  data-dismissible="true" data-display="overlay" data-inset="false" style="background-image:url(img/menub.png)">
+        <a data-role="button" data-theme="a" data-transition="slide" data-direction="reverse" href="#selectsection" data-icon="home" data-iconpos="left">
+           Home
+        </a>
+        <a data-role="button" data-theme="a" data-transition="slide"  href="#lifestyle" data-icon="star" data-iconpos="left">
+           Exclusive Offers
+        </a>
+        <a data-role="button" data-theme="a" data-rel="close"  data-transition="slide" href="#articles" data-icon="grid" data-iconpos="left">
+            Travel Club Articles
+        </a>
+                        <a data-role="button" data-theme="a"  data-transition="slide" href="#about"  data-icon="info" data-iconpos="left">
+           About Travel Club
+        </a>
+        <a data-role="button" data-theme="a" data-rel="close" href="#page1" data-icon="info" data-iconpos="left">
+           Agency Info
+        </a>
+        <a data-role="button" data-theme="a"  data-rel="close" href="#page1" data-icon="gear" data-iconpos="left">
+            Settings
+        </a>
+                <a data-role="button"  data-rel="close" data-theme="a" href="#menu1" data-icon="back" data-iconpos="left">
+            Close
+        </a>
+
+</div>
+
+
+ <!----Sample Articles Page: Filter--->
+  <div data-role="panel" id="pan_set" data-position="right"  data-theme="a"  data-dismissible="true" data-display="overlay">
+    <div data-role="content">
+        <div id="checkboxes1" data-role="fieldcontain" >
+            <fieldset data-role="controlgroup" data-type="vertical" data-mini="false">
+
+                <input id="checkbox1" name="Baby Boomer" type="checkbox" >
+                <label for="checkbox1">
+                    Baby Boomer
+                </label>
+                <input id="checkbox2" name="Culinary" type="checkbox">
+                <label for="checkbox2">
+                    Culinary
+                </label>
+                <input id="checkbox3" name="Experiential Travel" type="checkbox" >
+                <label for="checkbox3">
+                    Experiential Travel
+                </label>
+                <input id="checkbox4" name="Family  Travel" type="checkbox" >
+                <label for="checkbox4">
+                    Family  Travel
+                </label>
+                <input id="checkbox5" name="Luxury" type="checkbox">
+                <label for="checkbox5">
+                    Luxury
+                </label>
+  <input id="checkbox6" name="Romantic Travel" type="checkbox">
+                <label for="checkbox6">
+                    Romantic Travel
+                </label>
+            </fieldset>
+              <a class="ui-btn ui-shadow ui-btn-corner-all ui-btn-inline ui-btn-icon-left ui-btn-up-a" data-inline="true" data-icon="delete" data-theme="b" data-role="button" data-rel="close" href="#pan-set" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span">
+<span class="ui-btn-inner">
+<span class="ui-btn-text">Filter</span>
+<span class="ui-icon ui-icon-delete ui-icon-shadow"> </span>
+</span>
+</a>
+        </div>
+    </div>
+
+  </div> <!----END FilterPANEL--->
+  
+  
+
+<!----Sample Articles Page: Header--->
+  <div data-theme="a" data-role="header">
+    <h3>Travel Club Articles</h3>
+        <a href="#pan_set" data-rel="open" data-transition="fade" data-theme="" data-icon="gear" class="ui-btn-right" data-iconpos="left">Filter </a>
+<a href="#menua" data-rel="open" data-transition="fade" data-theme="" data-icon="grid" class="ui-btn-left" data-iconpos="left"> 
+Menu </a>
+  </div>
+  
+  
+ <!----Sample Articles Page: Content---> 
+      <div data-role="content">
+  <ul data-role="listview" data-inset="false">
+    <li><a href="#sample_article" data-transition="pop" >
+      <img src="./img/art_brazil.jpg">
+      <h2>2014 World Cup Brazil</h2>
+      <p>Next year, soccer’s greatest spectacle returns to beautiful Brazil for the first time in 64 years. </p>
+      </a> </li>
+    <li><a href="#sample_article" data-transition="pop" ><img src="./img/art_chicago.jpg">
+      <h2>Great Eats: Chicago</h2>
+      <p>Considered to be the quintessential American city, Chicago is a world-class destination touted for its architecture, magnificent museums — and its Magnificent Mile of luxury shops. It once even boasted the world’s largest meatpacking district.</p>
+      </a> </li>
+    <li><a href="#sample_article" data-transition="pop" ><img src="./img/art_romance.jpg">
+      <h2>Bring Back the Romance </h2>
+      <p>When it comes to getting away for some much needed beach-time with your sweetie, few areas of the world offer the variety of island </p>
+      </a> </li>
+    <li><a href="#sample_article" data-transition="pop" ><img src="./img/art_vietnam.jpg">
+      <h2>Demystifying the Vietnam and Southeast</h2>
+      <p>For many travelers, Southeast Asia is a vast, complex and relatively unknown part of the world. </p>
+      </a> </li>
+      
+          <li><a href="#sample_article" data-transition="pop" ><img src="./img/art_ski.jpg">
+      <h2>Demystifying the Vietnam and Southeast</h2>
+      <p>Go ahead and load up on the ski and snowboard wax — it’s time to start planning your next great ski vacation. But before you hit the powder this winter, here are some expert suggestions on where to find the best, most exciting ski destinations where you can soak up some fun after a day of carving the slopes.  </p>
+      </a> </li>
+      
+                <li><a href="#sample_article" data-transition="pop" ><img src="./img/art_euro.jpg">
+      <h2>Creating European Memories</h2>
+      <p>When my boyfriend and I decided to plan a two week trip to Europe, we wanted to visit several different countries and see as much as we could. Since planning an overseas vacation can be stressful, we decided that a tour would be ideal. Contiki Holidays had just what we wanted, so we booked their London, Paris and Amsterdam 10-day tour and relaxed knowing we would be traveling with people our age. Contiki has a simple philosophy of creating fun, carefree vacations across the globe with an unbeatable mix of sightseeing, culture, friendship and free time — all at an affordable price </p>
+      </a> </li>
+      
+      
+                      <li><a href="#sample_article" data-transition="pop" ><img src="./img/art_eats.jpg">
+      <h2>Great Eats: Australia</h2>
+      <p>Chokolait. Since it was established in 2007, Chokolait. has remained a steadfast favorite of Melbournians and those visitors lucky enough to sink their sweet tooth into the shop’s decadent chocolates, chocolate drinks and chocolate-based desserts. Owners Ross and Marianna Harvey have a simple philosophy: to make and serve the most extraordinary chocolates, the finest chocolate beverages and superb></p>
+      </a> </li>
+      
+          <li><a href="#sample_article"><img src="./img/art_sublime.jpg">
+      <h2>Sublime Escapes</h2>
+      <p>Whether it’s an elegant hotel in the big city or decadent sun-drenched resort, enjoying your next vacation has a lot to do with where you stay — after all, it is where each day </p>
+      </a> </li>
+ </ul>
+  </div>
+</div>
+<!--End Sample Articles--> 
+
+
+
+<!--Example Offer-->
+<div data-role="page" id="offer" style="background-color:#FFFFFF">
+ <div data-theme="a" data-role="header">
+        <a data-role="button" href="#featured" data-icon="delete" data-transition="slide" data-direction="reverse"  data-iconpos="left"
+        class="ui-btn-left">
+            Close
+        </a>
+        <h3>
+            Travel Club Offer
+        </h3>
+    </div>
+  <div data-role="content">
+ <div id ="offer_content">
+  <div style=" float:right; position: relative;  solid #b8b8b8;"><img src="img/tc_logo.png" width="120" height="71"></div>
+
+ <div style=" float:left; position: relative;  solid #b8b8b8;height:400px"><img src="img/dollar_full.jpg" style="padding-right:70px; "><br>
+   <img src="img/car.jpg" width="208" height="120"></div>
+      <h2>
+            FREE One Car Class Upgrade
+      </h2>  
+        <p>Book a Compact or Mid-size vehicle and receive a free upgrade to next higher car class up to a Full-size. Renter must meet minimum age, driver and credit requirements. Vehicles are subject to availability. This offer may not be combined with any other offer or promotion and has no cash value. Dollar reserves the right to cancel this offer without prior notice. Offer available at participating U.S. and Canada locations and expires 12/31/2013.   <br> <br><a data-role="button" data-theme="a" href="#page1" data-icon="star" data-iconpos="left" data-inline="true">
+         
+        Claim This Offer
+     </a> </p>
+             <p>
+           
+        </p>
+    </div>
+    
+  </div>
+          <h3>
+       
+        </h3>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+
+    </div>
+</div>
+
+
+<!--Example Article-->
+<div data-role="page" id="sample_article" style="background-color:#FFFFFF">
+ <div data-theme="a" data-role="header">
+        <a data-role="button" href="#page1" data-icon="info" data-iconpos="left"
+        class="ui-btn-right">
+            Info
+        </a>
+        <a data-role="button" href="#articles" data-icon="back" data-transition="slide" data-direction="reverse"  data-iconpos="left"  class="ui-btn-left"> Back
+        </a>
+        <h3>
+            Travel Club Article
+        </h3>
+    </div>
+  <div data-role="content">
+ <div id ="offer_content">
+  <div style=" float:right; position: relative;  solid #b8b8b8;"><img src="img/tc_logo.png" width="120" height="71"></div>
+
+ <div style=" float:left; position: relative;  solid #b8b8b8;height:300px;padding-top:20px"><img src="img/art_brazil.jpg" style="padding-right:40px; "></div>
+      <h2>
+            2014 World Cup Brazil
+      </h2>  
+      <p>Next year, soccer’s greatest spectacle returns to beautiful Brazil for the first time in 64 years. While Brazil didn’t invent the game (credit for that goes to England), there’s no doubt that it’s Brazil who has perfected and mastered what is by far the most popular sport on the planet.</p>
+
+<p>Held every four years, the World Cup is second only to the Olympic Games in terms of the number of participating countries, though it holds the title for being the world’s most widely viewed sporting event. Approximately 3.3 million tickets will be available for 2014 World Cup and will go on sale in 2013. The sale process will begin in August after the 2013 Confederations Cup which is also being staged in Brazil. The first batch of tickets that go on sale will be distributed via a lottery system. Fans can apply for tickets which will then be randomly distributed. This phase of the ticket selling process is available to anyone from any country.</p>
+
+<p>For those unable to get tickets for what is sure to be the biggest party of the decade, there will be “fan fests” held at each host city complete with activities for fans of the game. Host cities will include: Curitiba, Porto Alegre, Rio de Janeiro, Belo Horizonte, Brasilia, Cuiaba, Manaus, Salvador, Recife, Natal, Fortaleza and Sao Paulo.</p>
+             <p>The World Cup’s opening match will take place on June 12, 2014 in Sao Paulo. The Final is scheduled for July 13 at the iconic Maracana stadium in Rio de Janeiro.</p>
+
+<p>For more information about Brazil and obtaining tickets for the 2014 World Cup, contact your local travel professional.</p>
+
+<strong>Immerse Yourself in the Excitement With One of These Guided Tours</strong>
+
+<strong>GOVIVA!</strong>
+2014 World Cup Deluxe Package
+9 Days
+
+<p>Revel in the on-the-field drama and off-the-field celebration that is the World Cup. With this ultra-exclusive package you’ll enjoy eight nights’ luxury hotel accommodations in Rio de Janiero and a ticket to the 2014 World Cup Final (Category 2). All airport transfers, daily breakfast and a half-day guided tour is included. You will also have a personal concierge throughout your stay to handle any planning needs.</p>
+
+<strong>GLOBUS</strong>
+<br>
+South American Escape
+<em>9 Days</em>
+<p>From the vibrant cities of Rio de Janeiro and Buenos Aires, to the scenic beauty of Iguassu, this vacation has it all and will leave you with fond memories you’ll cherish for a lifetime. You’ll dance the Tango in Buenos Aires, groove to a Samba show in Rio and experience many other unforgettable moments along the way. A trip highlight is Iguassu Falls, one of the most spectacular sights on earth.</p>
+           
+           
+<strong>Collette Vacations</strong>
+<br>
+The Wonders of South America
+<em>11 Days</em>
+<p>Delve into the vivacious cultures of South America — from Brazil’s marvelous Rio de Janeiro and Iguassu, to Argentina’s serene city of Mendoza and lively Buenos Aires. You’ll ascend Corcovado by train to “Christ the Redeemer” (one of the Seven Wonders of the World), behold the power of the Iguassu Falls, relish renowned Argentinean wines, spend three nights in fantastic Buenos Aires, and much more.<p>
+
+<strong>AVANTI DESTINATIONS</strong>
+<br>
+Brazil Short and Sweet
+<em>6 Days</em>
+<p>This short and sweet vacation was created for those with less time to spend. First, experience the vibrant city of Rio de Janeiro, considered by many to be the most naturally beautiful city on earth; next, journey to Iguassu to witness the unsurpassed grandeur of spectacular Iguassu Falls. Find out for yourself why these two destinations together are one of the most popular travel adventures in all of South America.
+      </p>
+    </div>
+    
+  </div>
+          <h3>
+       
+        </h3>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+
+    </div>
+</div>
+
+
+
+<!--About the Travel Club-->
+<div data-role="page" id="about" style="background-color:#FFFFFF; clear:both">
+
+<!--About the Travel Club: Header-->
+ <div data-theme="a" data-role="header">
+        <a data-role="button" href="#page1" data-icon="info" data-iconpos="left"
+        class="ui-btn-right">
+            Info
+        </a>
+        <a data-role="button" href="#selectsection" data-icon="back" data-transition="slide" data-direction="reverse"  data-iconpos="left"
+        class="ui-btn-left">
+            Back
+        </a>
+        <h3>
+            About the Travel Club
+        </h3>
+    </div>
+
+<!--About the Travel Club:Content-->   
+     <div data-role="content">
+        <div data-role="collapsible-set" data-content-theme="c" data-inset="false" >
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>
+                    About Travel Club
+                </h3>
+    <div style=" float:right; position: relative;  solid #b8b8b8;"><img src="img/tc_logo.png" width="120" height="71"></div>
+     <h2>
+            About Travel Club
+      </h2>  
+<strong>Discover the most exciting travel opportunities available today.</strong>
+
+<p>We’re proud to bring you this one-of-a-kind travel club! We've tapped into our long-standing relationships with top travel companies to bring you the world's best travel deals available today.</p>
+<strong>As a Travel Club member, you'll receive:      </strong>
+      <ul>
+          <li>Discounted rates at hotels worldwide </li>
+             <li>Significant savings on cruises, vacations packages, tours, car rentals, etc. </li>
+             <li>Onboard offers from leading cruise lines </li>
+             <li>The personal attention of a local travel agent plus the convenience of web shopping </li>
+        <li> Value-added offers worth hundreds of dollars! </li>
+         
+        </ul>
+        
+        <p> On top of great travel savings, you'll also receive highly personalized service. Unlike other Travel Clubs, you will not speak to an unknown voice through an 800 number or send money to a P.O. box.  As a member of the “Club”, you'll be referred to a local travel agent who will personally answer your questions. All to ensure that you have the best possible vacation experience each time you set out on a new journey. Begin one of the greatest travel adventures of your life.  </p>
+
+        </p>
+            </div>
+            <div data-role="collapsible" data-collapsed="true">
+                <h3>
+                    Benefits
+                </h3>
+                    <div style=" float:right; position: relative;  solid #b8b8b8;"><img src="img/tc_logo.png" width="120" height="71"></div>
+                <h2>As a Travel Club member, you have instant access to incredible “members only” travel offers and discounts.</h2>
+
+<strong>Start saving hundreds on your next vacation by taking advantage of these great savings, and many more:</strong>
+
+     <ul>
+          <li>Save with popular cruise lines, plus receive onboard credits, upgrades and gift discounts</li>
+   <li> Exclusive offers on European or Mediterranean vacation packages</li>
+    <li>Enjoy luxury car rental upgrades and more…</li>
+
+
+<strong>Remember – the more you travel, the more you save!</strong>
+
+<strong>Personal Attention Plus Online Convenience</strong>
+<p>Travel Club members receive more than just great travel savings – they have priority access to their own local travel agent who can help find the best vacation destination and travel packages, and answer any questions. In addition, members can also sign in to the Travel Club website, 24/7, to browse Travel Club offers, destinations, weather, travel tips, and learn more about making the most of their membership.</p>
+
+<strong>Planning your next vacation has never been easier or more affordable!</strong>
+<strong>Deeply Discounted Hotel Rates</strong>
+<p>As a Travel Club member, you'll save BIG -- up to 50% off standard rates on hotel stays. Corporate traveler? Our exclusive hotel program includes deeply discounted rates at thousands of trusted hotels worldwide.</p>
+            </div>
+            <div data-role="collapsible" data-collapsed="true">
+                <h3>
+                    Travel Club FAQ
+                </h3>
+                    <div style=" float:right; position: relative;  solid #b8b8b8;"><img src="img/tc_logo.png" width="120" height="71"></div>
+      <h2>
+                    Travel Club FAQ
+                </h2>                
+<p>What car rental companies, cruise lines and other travel packages are included in the Travel Club?
+Travel Club members can access special savings with top travel companies you know and trust. Companies include Celebrity Cruises, Azamara Club Cruises, Holland America Line, Princess Cruises, Oceania Cruises, Trafalgar Tours, Contiki Holidays, Thrifty... and many more!</p>
+
+ 
+
+<strong>Can I use the Travel Club for business-related travel?</strong>
+<p>Of course! With our hotel program you'll save up to 50% off standard rates at thousands of well-known hotels around the world, from budget to ultra-luxury properties. Plus, discounts for car rentals, airfares and other travel-related savings can be used no matter if you're traveling on business or pleasure.</p>
+
+ 
+
+<strong>Who should I contact if I have more questions?</strong>
+<p>For additional questions – Contact Us!<p>
+            </div>
+ <!--           <div data-role="collapsible" data-collapsed="false">
+                <h3>
+                    Section Header
+                </h3>
+            </div>
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>
+                    Section Header
+                </h3>
+            </div>-->
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+/* Put your custom CSS here */
+
+#offer_hd{
+float:left;
+position:relative;
+width:100%
+}
+
+#offer_content{
+float:left;
+padding-left:70px;
+padding-right:20px;
+padding-bottom:20px;
+padding-top:20px;
+background-color:#FFFFFF
+}
